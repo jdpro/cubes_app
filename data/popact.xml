@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="affichage-donnees.xsl" type="text/xsl"?>
+<agregat xmlns="http://www.dornbusch.fr/2012/cubes"
+	xsi:schemaLocation="agregats.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	article="la" id="PT" libelle="population totale" definition="Ensemble de la population recensée sur un territoire donné à une date donnée.">
+	<composante article="les" id="RET" libelle="retraités"
+		definition="Ensemble des personnes qui se sont retirées la vie professionnelles. Inactifs qui ne sont plus le plus souvent en âge de travailler.">
+	</composante>
+	<composante article="les" id="ID" libelle="inactifs divers"
+		definition="Inactifs en âge de travailler mais ayant fait le choix (pères ou mères au foyer), ne pouvant pas travailler (handicap, longue maladie…) ou ne parvenant pas à trouver un emploi (chômeurs découragés recensés comme inactifs).">
+	</composante>
+	<composante article="les" libelle="scolaires, étudiants" id="SE"
+		definition="Inactifs n’ayant pas l’âge de travailler (élèves de moins de 15 ans) ou ayant choisi de poursuivre leurs études (étudiants de plus de 15 ans).">
+	</composante>
+	<composante article="la" libelle="population active" id="PA"
+		definition="Ensemble des personnes en âge de travailler qui occupent un emploi ou en cherchent un.">
+		<composante article="les" id="PAI" libelle="Chômeurs"
+			definition="Actif sans emploi qui, selon la définition internationale adoptée par le BIT, est une personne sans emploi, qui en recherche un de façon active et qui est immédiatement disponible.">
+		</composante>
+		<composante article="la" libelle="population active occupée"
+			id="PAO" definition="Actif occupant un emploi salarié ou indépendant.">
+			<composante id="IND" article="les"
+				libelle="indépendants" definition="Actifs occupés exerçant une activité non-salariée, à caractère artisanal, commercial ou libéral. Contrairement aux salariés ils organisent leur travail librement, en dehors de tout lien de subordination. ">
+			</composante>
+			<composante article="les" id="SAL" libelle="salariés"
+				definition="Actifs occupés qui s’engagent pour une période (limitée ou indéterminée), à exécuter un travail, à temps plein ou à temps partiel pour le compte d’un employeur, en contrepartie d’un salaire ou d’un traitement. Les conditions de la subordination à l’employeur sont le plus souvent décrites dans le contrat de travail qui le lie à son entreprise.">
+				<composante id="FON" article="les"
+					libelle="fonctionnaires" definition="Salariés dont l’employeur est une administration publique.">
+				</composante>
+				<composante id="SDP" article="les"
+					libelle="salariés de droit privé" definition="Salarié dont la subordination à un employeur est établie par un contrat de travail relevant du droit privé.">
+				</composante>
+			</composante>
+		</composante>
+	</composante>
+</agregat>

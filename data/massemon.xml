@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="affichage-donnees.xsl" type="text/xsl"?>
+<agregat xmlns="http://www.dornbusch.fr/2012/cubes"
+	xsi:schemaLocation="agregats.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	libelle="Actifs mobiliers" article="les" id="AM" definition="">
+	<composante libelle="Actifs non monétaires" article="les"
+		id="ANM"
+		definition="Titres ne pouvant être convertis rapidement en moyens de paiement, tels que les actions ou les obligations.">
+	</composante>
+	<composante libelle="M3" article="" id="M3"
+		majuscule_obligatoire="true"
+		definition="M3 égale M2 plus divers placements monétaires émis par les institutions financières négociables sur le marché monétaire. Il s’agit d’actifs dont le degré de liquidité est faible, essentiellement des dépôts à terme d'une durée inférieure à 2 ans, et des OPCVM monétaires. L'agrégat M3 est l'indicateur le plus large concernant le crédit bancaire, mais non pas l'ensemble du crédit dont une partie passe directement par les marchés financiers.">
+		<composante libelle="Titres d'OPCVM monétaires" article="les"
+			id="SM"
+			definition="Un OPCVM, ou Organisme de Placement Collectif en Valeurs Mobilières, est une entité qui gère un portefeuille dont les fonds investis sont placés en valeurs mobilières (actions ou obligations en particulier).">
+		</composante>
+		<composante libelle="Certificats de dépôt" article="les"
+			id="DD"
+			definition="Ce sont des instruments du marché monétaire, c’est-à-dire des titres d’une durée inférieure ou égale à un an négociables sur le marché monétaire.">
+		</composante>
+		<composante article="" libelle="M2" id="M2"
+			majuscule_obligatoire="true"
+			definition='M2 est égal à M1 plus le "crédit à court terme" à savoir les dépôts à terme inférieurs ou égaux à deux ans assortis d’un préavis de remboursement inférieur ou égal à trois mois. Le crédit à cours terme concerne ainsi principalement les comptes sur livrets qui peuvent être convertis aisément en actifs plus liquides.'>
+			<composante libelle="comptes sur livrets" article="les"
+				id="CL"
+				definition="Il s’agit des dépôts avec un préavis inférieur ou égal à 3 mois (livrets A, CODEVI, comptes épargne logement, livrets d’épargne populaire, livrets jeunes…)">
+			</composante>
+			<composante libelle="M1" article="" id="M1"
+				majuscule_obligatoire="true"
+				definition="L'agrégat M1, regroupe le total des pièces et billets en circulation et des dépôts bancaires à vue (comptes courants).">
+				<composante libelle="Monnaie scripturale" article="la"
+					id="MS"
+					definition="Dépôts monétaires dans les banques, dits « comptes à vue » (non rémunérés), sur lesquels il est possible d’effectuer des retraits, des virements par chèque ou carte bancaire. ">
+				</composante>
+				<composante definition="Billets et pièces (monnaie divisionnaire)"
+					article="la" libelle="Monnaie fiduciaire" id="MF">
+				</composante>
+			</composante>
+		</composante>
+		<composante article="les" id="PE"
+			definition="Ce sont des espèces perçues en contrepartie de titres vendus aux institutions financières  à un prix donné avec engagement de rachat à un prix et à une date donnés."
+			libelle="pensions" majuscule_obligatoire="true">
+		</composante>
+	</composante>
+</agregat>

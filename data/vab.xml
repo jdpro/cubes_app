@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="affichage-donnees.xsl" type="text/xsl"?>
+<agregat id="CA" libelle="Chiffre d'affaires" xmlns="http://www.dornbusch.fr/2012/cubes"
+	xsi:schemaLocation="agregats.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	article="le"
+	definition="Montant de la production vendue par l'entreprise (recette totale).">
+	<composante id="CI" libelle="Consommations intermédiaires"
+		article="les"
+		definition="Moyens de production détruits ou transformés au cours du cycle de production et dont la durée de vie est de moins d'un an.">
+	</composante>
+	<composante id="VA" libelle="Valeur ajoutée" article="la"
+		definition="Richesse nouvelle créée au cours du processus de production : valeur de la production finale de biens et/ou services moins valeur des consommations intermédiaires utilisées pour les produire.">
+		<composante id="RS" libelle="Rémunération des salariés"
+			article="la"
+			definition="Ensemble des salaires directs et des cotisations sociales versées aux salariés en contrepartie de leur travail. ">
+		</composante>
+		<composante id="IP" libelle="Impôts sur la production"
+			article="les"
+			definition="Impôts que les entreprises supportent du fait de leurs activités de production : taxe professionnelle, taxe foncière...">
+		</composante>
+		<composante id="EBE" libelle="Excédent brut d'exploitation"
+			article="l'"
+			definition="Désigne ce qu’il reste de la valeur ajoutée, déduction faite des salaires, des cotisations sociales et des impôts sur la production. Il s’agit d’une mesure des profits au sens large.">
+			<composante article="l'" id="AM" libelle="Amortissement"
+				definition="Mesure comptable de la perte de valeur du capital fixe due à l'usure ou à l'obsolescence. ">
+			</composante>
+			<composante id="INTV" libelle="Intérêts versés" article="les"
+				definition="Loyers versés par l'entreprise qui utilise des fonds empruntés afin de rémunérer ses créanciers.">
+			</composante>
+			<composante id="RE" libelle="Résultat d'exploitation"
+				article="le"
+				definition="Différence entre les charges et les produits d'exploitation : s'obtient en retranchant de l'EBE le montant des amortissements et les intérêts versés aux prêteurs.">
+				<composante id="IS" libelle="Impôt sur les sociétés"
+					article="l'" definition="Impôt perçu sur les bénéfices des sociétés.">
+				</composante>
+				<composante id="BN" libelle="Bénéfice net" article="le"
+					definition="Bénéfice qui revient à l'entreprise après paiement de l'impôt sur les sociétés.">
+					<composante id="BC" libelle="Bénéfice conservé par l'entreprise"
+						article="le"
+						definition="Part du bénéfice net non distribué aux propriétaires ou actionnaires.">
+					</composante>
+					<composante id="DIV" libelle="Dividendes" article="les"
+						definition="Part du bénéfice net distribuée aux actionnaires.">
+					</composante>
+				</composante>
+			</composante>
+		</composante>
+	</composante>
+
+</agregat>

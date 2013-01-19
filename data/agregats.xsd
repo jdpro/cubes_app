@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.dornbusch.fr/2012/cubes" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" 	xmlns="http://www.dornbusch.fr/2012/cubes">
+
+    <element name="agregat" type="Agregat"></element>
+    
+    <complexType name="Agregat">
+    	<sequence>
+    		<element name="composante" type="Agregat"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    	</sequence>
+    	<attribute name="id" type="string" use="required"></attribute>
+    	<attribute name="libelle" type="string"></attribute>
+    	<attribute name="definition" type="string" use="optional"></attribute>
+    	<attribute name="article" type="string" use="required"></attribute>
+    	<attribute name="majuscule_obligatoire" type="boolean" use="optional"></attribute>
+    </complexType>
+
+</schema>
